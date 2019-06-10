@@ -1,0 +1,158 @@
+<div class="mt-35">
+    <div class="row pos-relative white s-b">
+        <div class="col s2 l1 p-2 center s-r">
+            <img src="components/images/grey-logo.png" style="height:37px">
+        </div>
+
+        <div class="col s3 l3 p-16 blue-text left-align">
+            <span class="font-4">
+                <span id="chatUserName">Jayson Regalario</span> 
+                <i class="fa fa-check-circle font-2"></i>
+            </span>
+        </div>
+
+        <div class="col s4 l5 p-16 blue-text left-align" id="someOneTransacConfirm">
+            
+        </div>
+
+        <div class="col s2 l2 p-16 center blue-text left-align s-l"><span class="font-4" id="chatItemName">Meliodas Sword</span></div>
+
+        <div class="col s1 l1 p-4 center s-l"><span class=" font-3 dropdown-trigger blue-text" href='#'
+                data-target='dropdown1'><i class="fa fa-cog blue-text"></i> <span class="hide-on-med-and-down">Settings</span></span></div>
+    </div>
+    <div class="row">
+        <div class="col s2 l1 center z-index-1 s-r" style="height: 78vh;overflow: auto;">
+            <ul id="myChatHeads">
+                <li class="p-h m-select">
+                    <div class="preloader-wrapper small active">
+                        <div class="spinner-layer spinner-blue">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        
+                        <div class="spinner-layer spinner-red">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        
+                        <div class="spinner-layer spinner-yellow">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        
+                        <div class="spinner-layer spinner-green">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col s10 l11 center" id="myMessagesText" style="height: 66vh;overflow-y: auto;padding-bottom: 15px;">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+                
+                <div class="spinner-layer spinner-red">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+                
+                <div class="spinner-layer spinner-yellow">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+                
+                <div class="spinner-layer spinner-green">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+                </div>
+        </div>
+        <div class="col s10 l11">
+            <div class="col s1">
+                <i class="fas fa-paper-plane blue-text" style="font-size: 35px;
+                padding: 20px;padding-left:10px;margin-top:5px;"></i>
+            </div>
+            <div class="input-field col s10 s-t">
+                <form id="messageInp">
+                    <label id="confirmTransacItemId" class="hide"></label>
+                    <label id="bidId" class="hide"></label>
+                    <label id="chatSellerId" class="hide"></label>
+                    
+                    <label id="chatUserId" class="hide"></label>
+                    <label id="sellerInp" class="hide"></label>
+                    <input id="inpMessage" type="text" class="validate send-this" placeholder="Type your message here">
+                    <button type="submit" class="hide"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul id='dropdown1' class='dropdown-content taas1'>
+    <li class="blue-text"><a href="#!"><i class="fa fa-user-circle"></i>View Profile</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <!-- <li><a href="#!"><i class="fa fa-trash"></i> Delete Message</a></li> -->
+    <!-- <li><a href="#!"><i class="fa fa-money-bill"></i> Pay This User</a></li> -->
+    <li><a href="#!"><i class="fa fa-star" id="chatBtnRateUser"></i> Rate This User</a></li>
+    <li><a class="modal-trigger" href="#successTransactionModal"><i class="fa fa-check"></i> Success Transaction</a></li>
+    <li><a href="#!"><i class="fa fa-times" id="btnCancelDeal"></i> Cancel Deal</a></li>
+    <!-- <li><a href="#!"><i class="fa fa-ban"></i> Block</a></li> -->
+
+
+</ul>
+
+
+
+
+<script>
+    $('.dropdown-trigger').dropdown({
+        container: "body"
+    });
+</script>
+
+<script src="../app/core/myMessages.js"></script>
